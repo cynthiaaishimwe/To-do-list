@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+
+   <h1 id="todo">TO DO LIST</h1>
+  
+
+    <div id="priorities">
+
+        <div>
+        <div id="high-priority">
+            <!-- <h2>Today's tasks</h2> -->
+     <h3>High priority</h3>
+      <input type="text">
+      <input type="text">
+      <p id="icons"><ion-icon name="add-circle-outline"></ion-icon></p>
+      <hr>
+    </div>
+
+
+
+    <div id="medium-priority">
+     <h3>Medium priority</h3>
+      <input type="text">
+       <input type="text">
+       <p  id="icons"><ion-icon name="add-circle-outline"></ion-icon></p>
+       <hr>
+    </div>
+
+    <div id="low-priority">
+     <h3>Low priority</h3>
+     <input type="text">
+     <input type="text" >
+     <p id="icons" ><ion-icon name="add-circle-outline"></ion-icon></p>
+   
+    </div>
+
+
+</div>
+
+ 
+
+    <div id="in progress">
+        <h2>progressive Tasks</h2>
+        <input type="text">
+        <button id="complete">resume Task</button>
+        <input type="text">
+        <button id="complete">resume Task</button>
+      </div>
+      
+
+
+   
+    <div id="done">
+      <h2>completed tasks</h2>
+      <input type="text">
+      <input type="text">
+    </div>
+
+    </div>
+
+    <script>
+      // Fetch the API data
+      fetch('https://dummyjson.com/todos')
+        .then(res => res.json())
+        .then(data => {
+          const todoListDiv = document.getElementById('todoList');
+  
+          // Loop through the fetched todo items
+          data.forEach(todo => {
+            const todoItem = document.createElement('p');
+            todoItem.textContent = todo.title;
+            todoListDiv.appendChild(todoItem);
+          });
+        })
+        .catch(error => {
+          console.error('Error fetching API:', error);
+        });
+    </script>
+   
+  
+</body>
+</html>
+
+
+

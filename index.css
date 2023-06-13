@@ -1,0 +1,29 @@
+#todo{
+    text-align: center;
+    font-size: 30px;
+}
+#priorities{
+  display: flex;
+  justify-content: space-between;
+}
+input{
+    padding: 20px;
+    width: 60%;
+    margin: 20px;
+  
+}
+#icons{
+    font-size: 30px;
+
+}
+#complete{
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+}
+body{
+    background-color: #868E96;
+}
+
+
