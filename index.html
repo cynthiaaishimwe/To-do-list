@@ -16,7 +16,7 @@
    <h1 id="todo">TO DO LIST</h1>
   
 
-    <div id="priorities">
+    <div id="priorities" class="todos">
 
         <div>
         <div id="high-priority">
@@ -70,28 +70,18 @@
 
     </div>
 
-    <script>
-      // Fetch the API data
-      fetch('https://dummyjson.com/todos')
-        .then(res => res.json())
-        .then(data => {
-          const todoListDiv = document.getElementById('todoList');
-  
-          // Loop through the fetched todo items
-          data.forEach(todo => {
-            const todoItem = document.createElement('p');
-            todoItem.textContent = todo.title;
-            todoListDiv.appendChild(todoItem);
-          });
-        })
-        .catch(error => {
-          console.error('Error fetching API:', error);
-        });
-    </script>
+    <script src="index.js"></script>
    
+  </body>
+  </html> 
+
+   
+    
   
-</body>
-</html>
+
+
+
+
 
 
 
